@@ -1,0 +1,171 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  flex: 0 0 auto;
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center center;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.heroImageWrapper {
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 580px;
+  left: 0;
+  top: -140px;
+  flex: 0 0 auto;
+  opacity: 0.3;
+}
+
+.heroContentWrapper {
+  position: absolute;
+  top: -80px;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-flow: row nowrap;
+  place-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 100px 40px;
+}
+
+.heroContent {
+  position: relative;
+  overflow: visible;
+  max-width: 800px;
+  width: 1px;
+  height: min-content;
+  flex: 1 0 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  place-content: center flex-start;
+  align-items: center;
+  gap: 40px;
+  padding: 0px;
+}
+
+.profileImageWrapper {
+  border-radius: 100px;
+  box-shadow: rgb(0 0 0 / 5%) 0px 8px 16px 0px, rgb(0 0 0 / 10%) 0px 2px 4px 0px;
+  --border-bottom-width: 5px;
+  --border-top-width: 5px;
+  --border-right-width: 5px;
+  --border-left-width: 5px;
+  --border-style: solid;
+  --border-color: rgb(17, 153, 238);
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  width: 165px;
+  height: 315px;
+  flex: 0 0 auto;
+  aspect-ratio: 0.52381 / 1;
+  display: flex;
+  flex-flow: column nowrap;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileImageWrapper::after {
+  content: "";
+  border-width: var(--border-top-width, 0) var(--border-right-width, 0)
+    var(--border-bottom-width, 0) var(--border-left-width, 0);
+  border-color: var(--border-color, none);
+  border-style: var(--border-style, none);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-radius: inherit;
+}
+
+.profileContentWrapper {
+  max-width: 700px;
+  flex: 1 0 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  place-content: center flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0px;
+}
+
+.bioContainer {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  transform: none;
+  opacity: 1;
+}
+
+.bio {
+  --line-height: 1.6em;
+  --text-alignment: left;
+  --font-family: "Be Vietnam Pro", serif;
+  --font-style: normal;
+  --font-weight: 400;
+  --text-color: rgb(255, 255, 255);
+  --font-size: 24px;
+  --letter-spacing: -0.8px;
+  font-family: var(--font-family, Inter, sans-serif);
+  font-style: var(--font-style, normal);
+  font-weight: var(--font-weight, 400);
+  color: var(--text-color, #000);
+  font-size: var(--font-size, 16px);
+  letter-spacing: var(--letter-spacing, 0);
+  text-transform: var(--text-transform, none);
+  text-decoration: var(--text-decoration, none);
+  line-height: var(--line-height, 1.2em);
+  text-align: var(--text-alignment, start);
+}
+
+.profileContainer {
+  --line-height: 1.6em;
+  --font-family: "Be Vietnam Pro", serif;
+  --font-style: normal;
+  --font-weight: 400;
+  --text-color: rgb(85, 204, 255);
+  --font-size: 18px;
+  --letter-spacing: -0.4px;
+  flex: 1 0 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  place-content: flex-start;
+  align-items: flex-start;
+  font-family: var(--font-family, Inter, sans-serif);
+  font-style: var(--font-style, normal);
+  font-weight: var(--font-weight, 400);
+  font-size: var(--font-size, 16px);
+  letter-spacing: var(--letter-spacing, 0);
+  text-transform: var(--text-transform, none);
+  text-decoration: var(--text-decoration, none);
+  line-height: var(--line-height, 1.2em);
+  text-align: var(--text-alignment, start);
+}
+
+.profileName {
+  color: rgb(85, 204, 255);
+}
+
+.profileTitle {
+  color: rgb(255, 136, 170);
+}
