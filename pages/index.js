@@ -2,6 +2,7 @@ import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import Project from "../components/Project";
+import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
           <Project />
         </div>
       </main>
+      <Footer />
     </>
   );
 }
