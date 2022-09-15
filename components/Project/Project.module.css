@@ -237,3 +237,17 @@
   object-fit: cover;
   image-rendering: auto;
 }
+
+@media (max-width: 809px) {
+  .project {
+    flex-flow: column nowrap;
+  }
+
+  .projectSubInfoContainer {
+    width: 100%;
+  }
+
+  .projectMainInfoContainer {
+    width: 100%;
+  }
+}
