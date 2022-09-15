@@ -34,6 +34,7 @@
 }
 
 .projectRoleContainer {
+  width: 140px;
   background-color: rgba(140, 122, 255, 0.35);
   border-radius: 8px;
   display: flex;
