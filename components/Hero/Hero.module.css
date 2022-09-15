@@ -181,4 +181,8 @@
   .heroContent {
     flex-flow: column nowrap;
   }
+
+  .bio {
+    --font-size: 18px;
+  }
 }
