@@ -124,7 +124,7 @@
   --font-style: normal;
   --font-weight: 400;
   --text-color: rgb(255, 255, 255);
-  --font-size: 24px;
+  --font-size: 20px;
   --letter-spacing: -0.8px;
   font-family: var(--font-family, Inter, sans-serif);
   font-style: var(--font-style, normal);

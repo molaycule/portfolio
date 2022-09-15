@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./NavBar.module.css";
+import ContentfulContext from "../../contexts/ContentfulContext";
+import { useContext } from "react";
 
 export default function NavBar() {
+  const { linkedIn, github } = useContext(ContentfulContext);
+
   return (
     <div className={styles.navbar}>
       <div className={styles.navbarContent}>
@@ -12,12 +16,17 @@ export default function NavBar() {
           </a>
         </Link>
         <div className={styles.navExternalLinkContainer}>
-          <Link href="/">
+          <Link href={linkedIn}>
             <a className={styles.navLink}>
-              <Image src="/linkedin.svg" alt="linkedin" width={20} height={20} />
+              <Image
+                src="/linkedin.svg"
+                alt="linkedin"
+                width={20}
+                height={20}
+              />
             </a>
           </Link>
-          <Link href="/">
+          <Link href={github}>
             <a className={styles.navLink}>
               <Image src="/code.svg" alt="code" width={20} height={20} />
             </a>

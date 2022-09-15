@@ -1,29 +1,36 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Project.module.css";
+import dayjs from "dayjs";
 
-export default function Projects() {
+export default function Projects({
+  title,
+  shortDescription,
+  techStack,
+  slug,
+  image,
+  role,
+  date
+}) {
   return (
-    <Link href="/">
+    <Link href={slug}>
       <a className={styles.project}>
         <div className={styles.projectSubInfoContainer}>
           <div className={styles.projectSubInfoContent}>
             <div className={styles.projectRoleContainer}>
-              <p className={styles.projectRole}>Team Lead</p>
+              <p className={styles.projectRole}>{role}</p>
             </div>
-            <p className={styles.projectDate}>Jul 20, 2022</p>
+            <p className={styles.projectDate}>
+              {dayjs(date).format("MMM DD, YYYY")}
+            </p>
           </div>
         </div>
         <div className={styles.projectMainInfoContainer}>
           <div className={styles.projectMainInfoContent}>
-            <p className={styles.projectTitle}>Pura Vida</p>
+            <p className={styles.projectTitle}>{title}</p>
             <div className={styles.projectDescription}>
-              <p>
-                Pura Vida is a website for finding and booking luxurious beach
-                houses for vacation and short-let apartments; an admin panel for
-                managing properties, invoices, and reservations.
-              </p>
-              <p>Tech Stack: Typescript, Lit-html, Next.js, Rollup, Node.js</p>
+              <p>{shortDescription}</p>
+              <p>Tech Stack: {techStack}</p>
             </div>
             <div className={styles.projectMoreDetails}>
               <span className={styles.projectMoreDetailsLinkText}>
@@ -35,7 +42,7 @@ export default function Projects() {
             </div>
           </div>
           <div className={styles.projectMainInfoImage}>
-            <Image src="/pura-vida.jpg" alt="Pura Vida" layout="fill" />
+            <Image src={image} alt={title} layout="fill" />
           </div>
         </div>
       </a>
